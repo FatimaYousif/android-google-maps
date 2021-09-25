@@ -76,8 +76,10 @@ public class map extends FragmentActivity implements OnMapReadyCallback {
         MarkerOptions marker=new MarkerOptions()
                 .position(currentPlace)
                 .title("My Current Location")
-                .snippet(currentLocation.getLatitude()+" "+ currentLocation.getLongitude());  //snippet=subtitle
-        new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_home));
+                .snippet(currentLocation.getLatitude()+" "+ currentLocation.getLongitude())  //snippet=subtitle
+//                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_home));
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.home));
+
 
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(currentPlace));
